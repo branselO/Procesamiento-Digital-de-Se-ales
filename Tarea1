@@ -7,7 +7,7 @@
         "colab_type": "text"
       },
       "source": [
-        "<a href=\"https://colab.research.google.com/github/branselO/Procesamiento-Digital-de-Se-ales/blob/Abraham/TAREA_1_Discrete_Time_Signal_Operations_v5_audio_colab_example.ipynb\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+        "<a href=\"https://colab.research.google.com/github/branselO/Procesamiento-Digital-de-Se-ales/blob/Abraham/Tarea1\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
       ]
     },
     {
@@ -90,13 +90,13 @@
     },
     {
       "cell_type": "code",
-      "execution_count": 11,
+      "execution_count": 2,
       "metadata": {
         "colab": {
           "base_uri": "https://localhost:8080/"
         },
         "id": "BQgsV6Y05lit",
-        "outputId": "1457d9a5-4a56-4024-95b6-01d79c5ccccb"
+        "outputId": "6b035540-be71-4a9b-8d08-1120b623b30d"
       },
       "outputs": [
         {
@@ -134,7 +134,7 @@
     },
     {
       "cell_type": "code",
-      "execution_count": null,
+      "execution_count": 3,
       "metadata": {
         "id": "-wGmiBO55liu"
       },
@@ -203,7 +203,7 @@
     },
     {
       "cell_type": "code",
-      "execution_count": null,
+      "execution_count": 4,
       "metadata": {
         "id": "Y1wx9YR15liw"
       },
@@ -251,7 +251,7 @@
     },
     {
       "cell_type": "code",
-      "execution_count": null,
+      "execution_count": 5,
       "metadata": {
         "id": "HvluT5d-5liw"
       },
@@ -261,9 +261,9 @@
         "def time_reverse(x):\n",
         "    \"\"\"Return x_rev[n] = x[-n] assuming x is indexed on n=0..N-1 (finite-length).\"\"\"\n",
         "    # TODO: implement using loops / indexing\n",
-        "\n",
-        "    for i in range(len(x)):\n",
-        "      x_rev = x[::-1]\n",
+        "    x_rev = []\n",
+        "    for i in range(len(x) - 1, -1, -1):\n",
+        "        x_rev.append(x[i])\n",
         "    return x_rev\n",
         "\n",
         "def time_shift(x, k, pad_value=0.0):\n",
@@ -376,14 +376,14 @@
     },
     {
       "cell_type": "code",
-      "execution_count": null,
+      "execution_count": 6,
       "metadata": {
         "id": "BO2gx76Q5lix",
         "colab": {
           "base_uri": "https://localhost:8080/",
           "height": 965
         },
-        "outputId": "d841acd7-ba66-44da-bdd8-1843669abdc2"
+        "outputId": "03061e74-68f0-4f0f-fe21-86b6692d614d"
       },
       "outputs": [
         {
@@ -537,14 +537,14 @@
     },
     {
       "cell_type": "code",
-      "execution_count": null,
+      "execution_count": 7,
       "metadata": {
         "id": "bL59Psl85liy",
         "colab": {
           "base_uri": "https://localhost:8080/",
           "height": 1000
         },
-        "outputId": "a97c3948-4c55-4dbc-e7c4-cc4c7381c6d7"
+        "outputId": "7948c016-1514-48f5-ae9d-056226778793"
       },
       "outputs": [
         {
